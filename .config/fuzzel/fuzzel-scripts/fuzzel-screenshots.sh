@@ -1,26 +1,26 @@
 #!/bin/bash
 
-options="Screenshot\nScreenshot to Clipboard\nAll Windows\nAll Window after 5 Seconds"
+options="1 - Screenshot\n2 - Screenshot to Clipboard\n3 - All Windows\n4 - All Window after 5 Seconds"
 
 choice=$(echo -e "$options" | fuzzel --dmenu --prompt="Capture: ")
 
 case "$choice" in
-	"Screenshot")
+	"1 - Screenshot")
 		grim -g "$(slurp)"
-		thunar ~/Pictures/Screenshots
+		thunar ~/Pictures
 		;;
-	"Screenshot to Clipboard")
+	"2 - Screenshot to Clipboard")
 		grim -g "$(slurp)" - | wl-copy
 		notify-send "Screenshot Copied to Clipboard"
 		;;
-	"All Windows")
+	"3 - All Windows")
 		grim
-		thunar ~/Pictures/Screenshots
+		thunar ~/Pictures
 		;;
-	"All Windows after 5 Seconds")
+	"4 - All Windows after 5 Seconds")
 		sleep 5
 		grim
-		thunar ~/Pictures/Screenshots
+		thunar ~/Pictures
 		;;
 	*)
 		echo "No valid option selected."
