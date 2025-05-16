@@ -19,7 +19,7 @@ systemctl enable greetd.service
 
 ### Recommended Apps
 ```
-bluez bluez-utils brave-bin ungoogled-chromium-bin gnome-disk-utility onlyoffice-bin qbittorrent geany geany-plugins
+bluez bluez-utils brave-bin ungoogled-chromium-bin gnome-disk-utility onlyoffice-bin qbittorrent geany geany-plugins gtk-layer-shell layer-shell-qt
 choco-fontviewer font-manager fooyin freedownloadmanager labwc-menu-generator-git labwc-tweaks-git selectdefaultapplication-fork-git 
 wine-staging wine-gecko wine-mono winetricks winegui heroic-games-launcher steam
 ```
