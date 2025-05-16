@@ -1,0 +1,2 @@
+# start nwg-hello - full paths aren't required, but saves lookup time
+exec /usr/bin/nwg-hello; /usr/bin/labwc --exit
