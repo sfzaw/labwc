@@ -3,6 +3,7 @@
 ### To Do
 ```
 1.1 waybar workspaces
+2.1 add etc (greetd/nwg-hello)
 ```
 
 ### Installation Script
