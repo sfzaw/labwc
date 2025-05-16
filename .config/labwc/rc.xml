@@ -12,7 +12,7 @@
 	</core>
 
 	<theme>
-		<name>Arc-Dark_border_kv EOS</name>
+		<name>Arc-Dark-EOS</name>
 		<titlebar>
 			<layout>icon:iconify,max,close</layout>
 			<showTitle>yes</showTitle>
