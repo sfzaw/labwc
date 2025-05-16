@@ -1,0 +1,80 @@
+/* General Style */
+* {
+	border: none;
+	border-radius: 0;
+    font-family: "Noto Sans Mono";
+    font-size: 12px;
+    min-height: 0;
+    box-shadow: none;
+}
+
+/* Waybar main window style */
+window#waybar {
+    background: @theme_base_color;
+    border-bottom: 1px solid @unfocused_borders;
+    color: @theme_text_color;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+window#waybar.empty {
+	color: rgba(0, 0, 0, 0);
+}
+
+/* Top & Bottom Greyish Bar Style 
+.bottombar {
+	border-top: 3px solid #2e2e2e; } */
+.topbar {
+	border-bottom: 3px solid #2e2e2e;}
+
+/* Style for taskbar buttons */
+#taskbar button:hover {
+	background: rgba(100, 100, 100, 0.2); /* Gray hover effect */
+	box-shadow: inset 0 3px #333333;
+}
+
+#taskbar button.active {
+	background-color: #333333; /* Active button in the taskbar (grayish) */
+	box-shadow: inset 0 3px #333333;
+	border-top: 2px solid #5294e2;
+}
+
+/* Tooltip Style */
+tooltip {
+    background: @theme_base_color;
+    border: solid 1px @theme_base_color;
+}
+
+tooltip label {
+    color: @theme_text_color;
+}
+
+/* Common style for Modules */
+#custom-menu,
+#taskbar,
+#clock,
+#idle_inhibitor,
+#custom-wlsunset,
+#custom-screenshot,
+#cpu,
+#memory,
+#pulseaudio,
+#tray,
+#custom-seperator,
+#custom-power {
+	padding: 0 6px;
+	margin: 0;
+	color: #f8f9f9; /* Uniform color for modules(white) */
+}
+
+#custom-menu {
+    font-size: 14px;
+}
+
+/* Animation */
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
