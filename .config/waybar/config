@@ -1,0 +1,141 @@
+{
+	"layer": "bottom",
+	"position": "top",
+	"output": ["VGA-1"],
+	"height": 25,
+	
+	"modules-left": ["custom/menu", "custom/separator", "clock", "custom/separator", "custom/screenshot", "custom/wlsunset", "idle_inhibitor"],
+	"modules-center": ["wlr/taskbar"],
+	"modules-right": ["cpu", "memory", "pulseaudio", "custom/separator", "tray", "custom/separator", "custom/power"],
+
+// modules  󰀻   󰍛 󰄄  󰞅   󰾪 󰛊 󰾫  󰐥
+
+"custom/menu": {
+	"tooltip": false,
+	"format": "",
+	"on-click": "fuzzel"
+},
+
+"idle_inhibitor": {
+	"format": "{icon}",
+	"format-icons": {
+			"activated": "",
+			"deactivated": "󰾫"
+			},
+	"tooltip-format-activated": "Active",
+	"tooltip-format-deactivated": "Off"
+ },
+
+"wlr/taskbar": {
+	"format": "{icon} {app_id}", // {icon} for icons instead of text 
+	"icon-size": 14,
+	"icon-theme": "Qogir-dark",
+	"tooltip-format": "{title}",
+	"on-click": "minimize-raise",
+	"on-click-middle": "close",
+	
+	"ignore-list": [ ],
+	"app_ids-mapping": {
+		"firefoxdeveloperedition": "firefox-developer-edition"
+	},
+	"rewrite": {
+		"Firefox Web Browser": "Firefox",
+		"Foot Server": "Terminal",
+		"mpv Media Player": "mpv",
+		"Free Download Manager": "FDM",
+		"org.qbittorrent.qBittorrent": "qbittorrent"
+	}
+},
+
+
+"cpu": {
+//	"format": " {usage}%",
+	"format-critical":	"<span color='#e14245'><b> {usage}%</b></span>",
+	"format-normal":	"<span color='#d3dae3'> {usage}%</span>",
+	"interval": 3,
+	"states": {
+		"critical": 85,
+		"normal": 0,
+		},
+},
+	
+"memory": {
+//	"format": " {}%",
+	"format-critical": 	"<span color='#e14245'><b> {}%</b></span>",
+	"format-normal":	"<span color='#d3dae3'> {}%</span>",
+	"interval": 2,
+	"on-click": "foot -e 'htop'",
+	"states": {
+		"critical": 88,
+		"normal": 0,
+		},
+},
+
+"pulseaudio": {
+	"format": "{icon} {volume}%",
+	"format-muted": " Muted",
+	"format-icons": {
+		"default": ["", "", ""]
+		},
+	"tooltip": false,
+	"scroll-step": 5,
+	"on-click-right": "pavucontrol",
+	"on-click-middle": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+	"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+},
+
+"tray": {
+	"icon-size": 14,
+	"spacing": 8
+	},
+
+"clock": {
+	"interval": 10,
+	"timezone": "Asia/Dhaka",
+	"format": "{:%I:%M %p}",	// 24hrs Clock		%H:%M:%S
+	"format-alt": "{:%A %B %e}",// Short Day/Month	%a %b
+	"tooltip-format": " {:%A %m/%d}\n\n<tt><small>{calendar}</small></tt>",
+	"calendar": {
+		"on-scroll": 1,
+		"format": {
+			"months":     "<span color='#fdc35f'><b>{}</b></span>",
+			"days":       "<span color='#fcfcfc'><b>{}</b></span>",
+			"weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+			"weekdays":   "<span color='#5ca75b'><b>{}</b></span>",
+			"today":      "<span color='#e14245'><b><u>{}</u></b></span>"
+			}
+	},
+	"actions": {
+		"on-scroll-up": "shift_down",
+		"on-scroll-down": "shift_up"
+		},
+},
+
+"custom/screenshot": {
+	"tooltip-format": "Screenshot",
+	"format": "󰹑 ",
+	"on-click": "bash ~/.config/fuzzel/fuzzel-scripts/fuzzel-screenshots.sh",
+	"on-click-right": "grim - |wl-copy && notify-send 'All Windows Copied to Clipboard'"
+},
+
+"custom/wlsunset": {
+	"tooltip-format": "Night Light",
+	"format": " ",
+	"on-click": "notify-send 'Color Temparature: ON' && wlsunset -l 23.8 -L 90.4", // Enter lattittude and Longitude
+	"on-click-middle": "wlsunset -t 5500", // Prefered temparature
+	"on-click-right": "killall wlsunset && notify-send 'Color Temparature: OFF'"
+},
+
+"custom/separator": {
+	"format": "|",
+    "tooltip": false
+},
+
+"custom/power": {
+	"tooltip-format": "Power Menu",
+	"format": "",
+	"on-click": "bash ~/.config/fuzzel/fuzzel-scripts/fuzzel-powermenu.sh"
+}
+
+
+}
