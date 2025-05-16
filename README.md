@@ -6,7 +6,8 @@
 1.2 waybar clock module time
 2.1 labwc autostart swaybg wallpaper
 3.1 nwg-hello startup/login screen wallpaper
-4.1 customise gtkgreet? 
+4.1 customise gtkgreet?
+5.1 customise labwc-menu??
 ```
 
 ### Installation Script
