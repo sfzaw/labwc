@@ -1,9 +1,12 @@
 # LabWC
 
-### To Do
+### Note/Task for Devs
 ```
-1.1 waybar workspaces
-2.1 add etc (greetd/nwg-hello)
+1.1 waybar: add module such as brightness, battery etc
+1.2 waybar clock module time
+2.1 labwc autostart swaybg wallpaper
+3.1 nwg-hello startup/login screen wallpaper
+4.1 customise gtkgreet? 
 ```
 
 ### Installation Script
