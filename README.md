@@ -3,11 +3,11 @@
 ### Note/Task for Devs
 ```
 1.1 waybar: add module such as brightness, battery etc
-1.2 waybar clock module time
-2.1 labwc autostart swaybg wallpaper
-3.1 nwg-hello startup/login screen wallpaper
-4.1 customise gtkgreet?
-5.1 customise labwc-menu??
+1.2 waybar clock module timezone
+2.1 swaybg wallpaper config at labwc autostart
+3.1 nwg-hello startup/login screen wallpaper settings
+4.1 customise gtkgreet? to have an eos background lockscreen
+5.1 customise labwc-menu?? needs to be updated
 ```
 
 ### Installation Script
