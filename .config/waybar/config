@@ -36,14 +36,10 @@
 	
 	"ignore-list": [ ],
 	"app_ids-mapping": {
-		"firefoxdeveloperedition": "firefox-developer-edition"
-	},
-	"rewrite": {
-		"Firefox Web Browser": "Firefox",
-		"Foot Server": "Terminal",
-		"mpv Media Player": "mpv",
-		"Free Download Manager": "FDM",
-		"org.qbittorrent.qBittorrent": "qbittorrent"
+	"brave-browser": "brave",
+	"Free Download Manager": "fdm",
+	"org.qbittorrent.qBittorrent": "qbittorrent",
+	"org.nomacs.ImageLounge": "nomacs"
 	}
 },
 
