@@ -36,10 +36,10 @@
 	
 	"ignore-list": [ ],
 	"app_ids-mapping": {
-	"brave-browser": "brave",
-	"Free Download Manager": "fdm",
-	"org.qbittorrent.qBittorrent": "qbittorrent",
-	"org.nomacs.ImageLounge": "nomacs"
+		"brave-browser": "brave",
+		"Free Download Manager": "fdm",
+		"org.qbittorrent.qBittorrent": "qbittorrent",
+		"org.nomacs.ImageLounge": "nomacs"
 	}
 },
 
